@@ -13,7 +13,7 @@ function App() {
     const sendMessage = (name, email, message) => {
         setStatus('sending');
 
-        fetch('http://192.168.43.44:5000/new_message', {
+        fetch('https://judgeportfolio.herokuapp.com/new_message', {
             method: 'POST',
             mode: 'cors',
             headers: {
