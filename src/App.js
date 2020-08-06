@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './css/styles.css';
+import TopBar from './components/TopBar';
+import Alert from './components/Alert';
+import HomeTab from './components/HomeTab';
+import Contact from './components/Contact';
+import Portfolio from './components/Portfolio';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [status, setStatus] = useState('idle');
+    const sendMessage = (name, email, message) => {
+        setStatus('sending');
+
+        fetch('http://192.168.43.44:5000/new_message', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        })
+            .then(data => data.json())
+            .then(res => {
+                setStatus('sent');
+                if (res.result === 'success') setStatus('success');
+                else setStatus('failure')
+            })
+            .catch(error => setStatus('failure'))
+    }
+
+    return (
+        <Router>
+            <div className="app">
+                <TopBar />
+                <Alert
+                    status={status}
+                />
+
+                <Switch>
+                    <Route path="/" exact component={HomeTab} />
+                    <Route
+                        path="/contact"
+                        render={(props) =>
+                            <Contact {...props} sendMessage={sendMessage} status={status} />
+                        }
+                    />
+                    <Route path="/portfolio" component={Portfolio} />
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

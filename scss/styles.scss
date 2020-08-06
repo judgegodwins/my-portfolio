@@ -1,0 +1,10 @@
+@import 'utilities';
+@import './screens/topbar';
+@import './screens/hometab';
+@import './screens/contact';
+@import './screens/portfolio';
+
+.app {
+    height: 100%;
+    position: relative;
+}
