@@ -77,7 +77,7 @@ class Contact extends Component {
                             <span className="focus-border"></span>
                         </div>
                     </div>
-                    <button type="submit" style={{ marginTop: "20px" }} onClick={this.handleSubmit}>
+                    <button type="submit" disabled={this.props.status == 'sending' ? true : false} style={{ marginTop: "20px" }} onClick={this.handleSubmit}>
                         {
                             this.props.status == 'sending'?
                                 <div className="cover">

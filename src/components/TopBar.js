@@ -6,8 +6,11 @@ function TopBar() {
     return (
         <div className="top-bar">
             <ul className="links">
+                <Link to="/">
+                    <li className="link">HOME</li>
+                </Link>
                 <Link to="/portfolio">
-                    <li className="link">PORTFOLIO</li>
+                    <li className="link">PROJECTS</li>
                 </Link>
                 <Link to="/contact">
                     <li className="link">CONTACT ME</li>

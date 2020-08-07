@@ -15,7 +15,7 @@ function Alert({ status }) {
             style={{ 
                 background: success ? 'rgb(0, 255, 0)' : 'red',
                 display: status != 'sending' && status != 'idle'
-                    ? "block"
+                    ? "flex"
                     : "none"
             }}
         >

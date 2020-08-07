@@ -105,21 +105,28 @@ button {
 }
 
 .alert {
-    position: absolute;
-    top: 10%;
+    // position: absolute;
+    // top: 10%;
     width: 100%;
-    height: 60px;
+    height: 40px;
     display: none;
-    left: 0;
+    // left: 0;
     @include flex();
     transition: 200ms ease-in-out;
     box-shadow: 13px 32px 36px -14px hsla(0,0%,70%,.3);
-
-
+    margin-bottom: 15px;
     color: white !important;
-    padding: 10px;
+    padding: 5px 10px;
 
     &>p {
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .touch-indicator {
+        &:active {
+            background: transparent;
+        }
     }
 }

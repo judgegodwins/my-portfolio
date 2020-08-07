@@ -22,7 +22,7 @@
     .project {
         @include flex();
         flex-direction: column;
-        background: red;
+        // background: red;
         // width: 100%;
         height: 350px;
         padding: 20px;
@@ -37,6 +37,9 @@
         }
         &:nth-child(3) {
             background: #101820;
+        }
+        &:nth-child(4) {
+            background: rgb(64, 100, 218);
         }
         &:last-child {
             background: #079992;

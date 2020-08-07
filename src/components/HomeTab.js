@@ -15,13 +15,13 @@ function HomeTab() {
                 </p>
                 <div className="socials home">
                     <div className="social touch-indicator">
-                        <a href="#"><i className="fab fa-github"></i></a>
+                        <a target="_blank" href="https://github.com/judgegodwins"><i className="fab fa-github"></i></a>
                     </div>
                     <div className="social touch-indicator">
-                        <a href="#"><i className="fab fa-twitter"></i></a>
+                        <a target="_blank" href="https://twitter.com/judgegodwins"><i className="fab fa-twitter"></i></a>
                     </div>
                     <div className="social touch-indicator">
-                        <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="https://ng.linkedin.com/in/judge-godwins-221140113"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <Link className="explore-link" to="/portfolio">
