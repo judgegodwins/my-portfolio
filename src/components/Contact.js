@@ -5,7 +5,6 @@ class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sending: false,
             name: '',
             phone_number: '',
             email: '',
@@ -13,13 +12,6 @@ class Contact extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    componentDidMount() {
-        console.log('props: ', this.props.status);
-    }
-    componentDidUpdate() {
-        console.log('props: ', this.props.status);
     }
 
     handleChange(e) {
@@ -35,7 +27,7 @@ class Contact extends Component {
         e.preventDefault();
 
         const { name, email, message } = this.state
-        if(name != '' && email != '' && message != '')
+        if(name.trim() !== '' && email.trim() !== '' && message.trim() !== '')
             this.props.sendMessage(name, email, message);
         else
             return;

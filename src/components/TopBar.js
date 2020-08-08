@@ -9,7 +9,7 @@ function TopBar() {
                 <Link to="/">
                     <li className="link">HOME</li>
                 </Link>
-                <Link to="/portfolio">
+                <Link to="/projects">
                     <li className="link">PROJECTS</li>
                 </Link>
                 <Link to="/contact">

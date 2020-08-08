@@ -4,7 +4,7 @@ import screen from '../images/screen.4f85ea4.png';
 import first from '../images/ctr.e069b5d.png';
 import second from '../images/lc.5abc476.png'
 
-function Portfolio() {
+function Portfolio(props) {
 
     return (
         <div className="portfolio-cover">
@@ -13,7 +13,7 @@ function Portfolio() {
                 <div className="liner" style={{ background: "black", marginBottom: "20px" }}></div>
             </div>
             <div className="portfolio-div">
-                <a href="https://convrge.herokuapp.com" target="_blank" className="project">
+                <a href="https://convrge.herokuapp.com" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={first} />
                     </div>
@@ -27,7 +27,7 @@ function Portfolio() {
                         It's still under construction.
                 </p>
                 </a>
-                <a href="https://findsellr.netlify.com/businesspage.html" target="_blank" className="project">
+                <a href="https://findsellr.netlify.com/businesspage.html" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={second} />
                     </div>
@@ -41,7 +41,7 @@ function Portfolio() {
                         It's still in works.
                     </p>
                 </a>
-                <a href="https://ricapp.netlify.app" target="_blank" className="project">
+                <a href="https://ricapp.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={block} />
                     </div>
@@ -54,7 +54,7 @@ function Portfolio() {
                         with school work and their curriculum in the face of the current lockdown due to COVID19 using videos sourced from youtube.
                     </p>
                 </a>
-                <a target="_blank" className="project">
+                <a target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={screen} />
                     </div>
@@ -70,7 +70,7 @@ function Portfolio() {
                         PS: This was my first project
                     </p>
                 </a>
-                <a href="https://api.customerpay.me" target="_blank" className="project">
+                <a href="https://api.customerpay.me" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={screen} />
                     </div>

@@ -13,7 +13,7 @@ function Alert({ status }) {
             ref={alertDiv}
             className="alert" 
             style={{ 
-                background: success ? 'rgb(0, 255, 0)' : 'red',
+                background: success ? 'rgb(0, 240, 0)' : 'red',
                 display: status != 'sending' && status != 'idle'
                     ? "flex"
                     : "none"

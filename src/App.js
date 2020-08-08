@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './css/styles.css';
 import TopBar from './components/TopBar';
 import Alert from './components/Alert';
-import HomeTab from './components/HomeTab';
-import Contact from './components/Contact';
-import Portfolio from './components/Portfolio';
+import Container from './components/Container';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-function App() {
+function App(props) {
     const [status, setStatus] = useState('idle');
     const sendMessage = (name, email, message) => {
         setStatus('sending');
@@ -37,17 +35,7 @@ function App() {
                 <Alert
                     status={status}
                 />
-
-                <Switch>
-                    <Route path="/" exact component={HomeTab} />
-                    <Route
-                        path="/contact"
-                        render={(props) =>
-                            <Contact {...props} sendMessage={sendMessage} status={status} />
-                        }
-                    />
-                    <Route path="/portfolio" component={Portfolio} />
-                </Switch>
+                <Container status={status} sendMessage={sendMessage} />
             </div>
         </Router>
     );

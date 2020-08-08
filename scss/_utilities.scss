@@ -123,6 +123,13 @@ button {
     }
 }
 
+@mixin tab-common() {
+    width: 100%;
+    padding: 0 $sidepadding;
+    @include flex();
+    height: 100%;
+}
+
 @media only screen and (min-width: 1024px) {
     .touch-indicator {
         &:active {
