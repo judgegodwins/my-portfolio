@@ -3,7 +3,7 @@ import Picture from "../images/picture.jpg";
 import { Link } from 'react-router-dom';
 
 function HomeTab(props) {
-    console.log('home props: ',props)
+
     return (
         <div className="home-tab">
             <div className="about">
