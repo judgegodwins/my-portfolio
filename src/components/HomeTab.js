@@ -10,8 +10,8 @@ function HomeTab(props) {
                 <h1>Hi, I'm Judge</h1>
 
                 <p>
-                    I'm a "Backend" Fullstack Developer with an eye for detail
-                    and a minimalist also.
+                    I'm a Full-stack Web Developer. I build beautiful 
+                    and functional web apps for fun.
                 </p>
                 <div className="socials home">
                     <div className="social touch-indicator">
