@@ -24,7 +24,7 @@ function HomeTab(props) {
                         <a target="_blank" rel="noopener noreferrer" href="https://ng.linkedin.com/in/judge-godwins-221140113"><i className="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <Link className="explore-link" to="/portfolio">
+                <Link className="explore-link" to="/projects">
                     <button className="explore">EXPLORE  <i className="fas fa-long-arrow-alt-right"></i></button>
                 </Link>
             </div>
