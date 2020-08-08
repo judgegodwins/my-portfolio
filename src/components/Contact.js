@@ -23,13 +23,47 @@ class Contact extends Component {
 
     }
 
+    sendMessage(name, email, message) {
+        let { setStatus, setName } = this.props;
+        setStatus('sending');
+
+        return fetch('https://judgeportfolio.herokuapp.com/new_message', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        })
+        .then(data => data.json())
+        .then(res => {
+            setStatus('sent');
+
+            if (res.result === 'success') {
+                setStatus('success');
+                setName(name);
+                return this.setState({
+                    name: '',
+                    phone_number: '',
+                    email: '',
+                    message: ''
+                });
+            } else {
+                setStatus('failure');
+            }
+            
+        })
+        .catch(error => setStatus('failure'));
+
+    }
+
     handleSubmit(e) {
         e.preventDefault();
 
-        const { name, email, message } = this.state
-        if(name.trim() !== '' && email.trim() !== '' && message.trim() !== '')
-            this.props.sendMessage(name, email, message);
-        else
+        const { name, email, message } = this.state;
+        if(name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
+            this.sendMessage(name, email, message)
+        } else
             return;
     }
 

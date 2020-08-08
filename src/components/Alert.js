@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 
-function Alert({ status }) {
-    const success = status === 'success'
+function Alert({ status, name }) {
+    const success = status === 'success';
+    
     const alertDiv = useRef(null);
     if(success || status == "failure")
         setTimeout(() => {
@@ -22,7 +23,7 @@ function Alert({ status }) {
             <p>
                 {
                     success
-                        ? "Hi, I've received your message and will get back to you shortly"
+                        ? `Hi ${name.split(' ')[0]}, I've received your message and will get back to you shortly`
                         : "Oops, something went wrong. Try checking your connection"
 
                 }

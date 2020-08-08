@@ -7,26 +7,8 @@ import Alert from './components/Alert';
 import Container from './components/Container';
 
 function App(props) {
-    const [status, setStatus] = useState('idle');
-    const sendMessage = (name, email, message) => {
-        setStatus('sending');
-
-        fetch('https://judgeportfolio.herokuapp.com/new_message', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, message })
-        })
-            .then(data => data.json())
-            .then(res => {
-                setStatus('sent');
-                if (res.result === 'success') setStatus('success');
-                else setStatus('failure')
-            })
-            .catch(error => setStatus('failure'))
-    }
+    const [ status, setStatus ] = useState('idle');
+    const [ name, setName ] = useState('');
 
     return (
         <Router>
@@ -34,8 +16,9 @@ function App(props) {
                 <TopBar />
                 <Alert
                     status={status}
+                    name={name}
                 />
-                <Container status={status} sendMessage={sendMessage} />
+                <Container status={status} setStatus={setStatus} setName={setName} />
             </div>
         </Router>
     );

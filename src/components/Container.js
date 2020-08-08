@@ -6,7 +6,7 @@ import HomeTab from './HomeTab';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
 
-function Container({ location, status, sendMessage }) {
+function Container({ location, status, setName, setStatus }) {
     return (
         <TransitionGroup className="transition-group">
             <CSSTransition
@@ -20,7 +20,7 @@ function Container({ location, status, sendMessage }) {
                         <Route
                             path="/contact"
                             render={(props) =>
-                                <Contact {...props} sendMessage={sendMessage} status={status} />
+                                <Contact {...props} status={status} setStatus={setStatus} setName={setName} />
                             }
                         />
                         <Route path="/projects" component={Portfolio} />
