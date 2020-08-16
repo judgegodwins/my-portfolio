@@ -13,35 +13,7 @@ function Portfolio(props) {
                 <div className="liner" style={{ background: "black", marginBottom: "20px" }}></div>
             </div>
             <div className="portfolio-div">
-                <a href="https://convrge.herokuapp.com" target="_blank" rel="noopener noreferrer" className="project">
-                    <div className="image">
-                        <img src={first} />
-                    </div>
-                    <div className="top">
-                        <h3 className="title">Converge</h3>
-                        <div className="liner"></div>
-                    </div>
-                    <p>
-                        Converge is a private messaging app built for fun.
-                        It's being designed with option to remain private or go a little bit public.
-                        It's still under construction.
-                </p>
-                </a>
-                <a href="https://findsellr.netlify.com/businesspage.html" target="_blank" rel="noopener noreferrer" className="project">
-                    <div className="image">
-                        <img src={second} />
-                    </div>
-                    <div className="top">
-                        <h3 className="title">Findsellr Business Page</h3>
-                        <div className="liner"></div>
-                    </div>
-                    <p>
-                        Findsellr is an app that aims to bring
-                        sellers closer to customers.
-                        It's still in works.
-                    </p>
-                </a>
-                <a href="https://ricapp.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
+            <a href="https://ricapp.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={block} />
                     </div>
@@ -50,11 +22,25 @@ function Portfolio(props) {
                         <div className="liner"></div>
                     </div>
                     <p>
-                        RICApp is just a mini project to help students of a particular school keep abreast
-                        with school work and their curriculum in the face of the current lockdown due to COVID19 using videos sourced from youtube.
+                        RICApp is just a mini project to help students of a school keep abreast
+                        with school work and their curriculum in the face of the current lockdown using videos sourced from youtube.
                     </p>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" className="project">
+                <a href="https://findsellr.netlify.com/businesspage.html" target="_blank" rel="noopener noreferrer" className="project">
+                    <div className="image">
+                        <img src={second} />
+                    </div>
+                    <div className="top">
+                        <h3 className="title">Findsellr Business Page (Web View)</h3>
+                        <div className="liner"></div>
+                    </div>
+                    <p>
+                        Findsellr is an app that aims to bring
+                        sellers closer to customers.
+                        It's still in works.
+                    </p>
+                </a>
+                <a target="_blank" href="https://github.com/judgegodwins/musicplayr" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={screen} />
                     </div>
@@ -83,6 +69,20 @@ function Portfolio(props) {
                         keep records and handle store matters with ease.
                         My Work is featured in CustomerPayMe's API
                     </p>
+                </a>
+                <a href="https://convrge.herokuapp.com" target="_blank" rel="noopener noreferrer" className="project">
+                    <div className="image">
+                        <img src={first} />
+                    </div>
+                    <div className="top">
+                        <h3 className="title">Converge</h3>
+                        <div className="liner"></div>
+                    </div>
+                    <p>
+                        Converge is a private messaging app built for fun.
+                        <br/>
+                        Coming Soon!
+                </p>
                 </a>
             </div>
         </div>
