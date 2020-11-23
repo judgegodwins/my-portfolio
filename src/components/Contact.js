@@ -27,7 +27,7 @@ class Contact extends Component {
         let { setStatus, setName } = this.props;
         setStatus('sending');
 
-        return fetch('https://judgeportfolio.herokuapp.com/new_message', {
+        return fetch('https://judgeportfolio.herokuapp.com/message/new', {
             method: 'POST',
             mode: 'cors',
             headers: {
