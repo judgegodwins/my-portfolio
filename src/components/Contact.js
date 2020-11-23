@@ -39,7 +39,7 @@ class Contact extends Component {
         .then(res => {
             setStatus('sent');
 
-            if (res.result === 'success') {
+            if (res.success) {
                 setStatus('success');
                 setName(name);
                 return this.setState({
