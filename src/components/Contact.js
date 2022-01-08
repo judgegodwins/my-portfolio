@@ -7,7 +7,8 @@ class Contact extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      phone_number: ''
     };
     this.phoneRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
@@ -23,17 +24,17 @@ class Contact extends Component {
 
   }
 
-  sendMessage(name, email, message, phoneNumber) {
+  sendMessage(name, email, message, phone_number) {
     let { setStatus } = this.props;
     setStatus('sending');
 
-    return fetch('https://judge-resume.herokuapp.com/api/message/deliver', {
+    return fetch('https://judge-portfolio-api.herokuapp.com/message/new', {
       method: 'POST',
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name, email, message, phoneNumber: Boolean(phoneNumber) ? phoneNumber : undefined })
+      body: JSON.stringify({ name, email, message, phone_number: Boolean(phone_number) ? phone_number : undefined })
     })
       .then(data => data.json())
       .then(res => {
@@ -45,7 +46,8 @@ class Contact extends Component {
           return this.setState({
             name: '',
             email: '',
-            message: ''
+            message: '',
+            phone_number: ''
           });
         } else {
           setStatus('failure');
@@ -59,9 +61,9 @@ class Contact extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const { name, email, message } = this.state;
+    const { name, email, message, phone_number } = this.state;
     if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
-      this.sendMessage(name, email, message, this.phoneRef.current.value)
+      this.sendMessage(name, email, message, phone_number)
     } else
       return;
   }
@@ -81,9 +83,9 @@ class Contact extends Component {
 
           <div className="short-input">
             <div className="short-input-child">
-              <label htmlFor="phoneNumber">Phone Number</label>
+              <label htmlFor="phone_number">Phone Number</label>
               <div className="is-relative">
-                <input type="tel" id="phoneNumber" name="phoneNumber" ref={this.phoneRef} onChange={this.handleChange} required />
+                <input type="tel" id="phone_number" name="phone_number" value={this.state.phone_number} ref={this.phoneRef} onChange={this.handleChange} />
                 <span className="focus-border"></span>
               </div>
             </div>
