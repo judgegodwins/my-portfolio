@@ -13,7 +13,7 @@ function Portfolio(props) {
                 <div className="liner" style={{ background: "black", marginBottom: "20px" }}></div>
             </div>
             <div className="portfolio-div">
-                <a href="https://dev.convrge.live" target="_blank" rel="noopener noreferrer" className="project">
+                <a href="https://convrge.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={first} />
                     </div>
