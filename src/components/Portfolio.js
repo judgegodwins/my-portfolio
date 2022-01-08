@@ -25,6 +25,18 @@ function Portfolio(props) {
                         Converge is a private messaging app built for fun.
                     </p>
                 </a>
+                <a href="https://anonly.netlify.app/login" target="_blank" rel="noopener noreferrer" className="project">
+                    <div className="image">
+                        <img src={first} />
+                    </div>
+                    <div className="top">
+                        <h3 className="title">Anonly</h3>
+                        <div className="liner"></div>
+                    </div>
+                    <p>
+                        Anonly is an anonymous messaging app. (Work in progress)
+                    </p>
+                </a>
                 <a href="https://coll.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
                         <img src={first} />
