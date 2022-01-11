@@ -13,21 +13,9 @@ function Portfolio(props) {
                 <div className="liner" style={{ background: "black", marginBottom: "20px" }}></div>
             </div>
             <div className="portfolio-div">
-                <a href="https://convrge.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
+                <a href="https://anonly.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={first} />
-                    </div>
-                    <div className="top">
-                        <h3 className="title">Converge</h3>
-                        <div className="liner"></div>
-                    </div>
-                    <p>
-                        Converge is a private messaging app built for fun.
-                    </p>
-                </a>
-                <a href="https://github.com/judgegodwins/anonly-api" target="_blank" rel="noopener noreferrer" className="project">
-                    <div className="image">
-                        <img src={first} />
+                        <img src={first} alt="Icon"/>
                     </div>
                     <div className="top">
                         <h3 className="title">Anonly</h3>
@@ -37,9 +25,21 @@ function Portfolio(props) {
                         Anonly is an anonymous messaging app. (Work in progress)
                     </p>
                 </a>
+                <a href="https://convrge.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
+                    <div className="image">
+                        <img src={first} alt="Icon"/>
+                    </div>
+                    <div className="top">
+                        <h3 className="title">Converge</h3>
+                        <div className="liner"></div>
+                    </div>
+                    <p>
+                        Converge is a private messaging app built for fun.
+                    </p>
+                </a>
                 <a href="https://coll.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={first} />
+                        <img src={first} alt="Icon"/>
                     </div>
                     <div className="top">
                         <h3 className="title">Coll</h3>
@@ -51,7 +51,7 @@ function Portfolio(props) {
                 </a>
                 <a href="https://ricapp.netlify.app" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={block} />
+                        <img src={block} alt="Icon" />
                     </div>
                     <div className="top">
                         <h3 className="title">RICApp</h3>
@@ -64,7 +64,7 @@ function Portfolio(props) {
                 </a>
                 <a href="https://findsellr.netlify.com/businesspage.html" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={second} />
+                        <img src={second} alt="Icon"/>
                     </div>
                     <div className="top">
                         <h3 className="title">Findsellr Business Page (Web View)</h3>
@@ -78,7 +78,7 @@ function Portfolio(props) {
                 </a>
                 <a target="_blank" href="https://github.com/judgegodwins/musicplayr" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={screen} />
+                        <img src={screen} alt="Icon"/>
                     </div>
                     <div className="top">
                         <h3 className="title">Musicplayr</h3>
@@ -94,7 +94,7 @@ function Portfolio(props) {
                 </a>
                 <a href="https://api.customerpay.me" target="_blank" rel="noopener noreferrer" className="project">
                     <div className="image">
-                        <img src={screen} />
+                        <img src={screen} alt="Icon"/>
                     </div>
                     <div className="top">
                         <h3 className="title">CustomerPayMe (API)</h3>
