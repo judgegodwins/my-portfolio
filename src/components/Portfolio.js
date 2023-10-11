@@ -31,6 +31,21 @@ function Portfolio(props) {
           <p>Anonly is an anonymous messaging app. (Work in progress)</p>
         </a>
         <a
+          href="https://chessrepo.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project"
+        >
+          <div className="image">
+            <img src={first} alt="Icon" />
+          </div>
+          <div className="top">
+            <h3 className="title">Multiplayer Chess</h3>
+            <div className="liner"></div>
+          </div>
+          <p>A simple multiplayer chess game.</p>
+        </a>
+        <a
           href="https://admin-ges.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,21 +61,6 @@ function Portfolio(props) {
           <p>A student management platform for a University Department</p>
         </a>
         <a
-          href="https://convrge.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project"
-        >
-          <div className="image">
-            <img src={first} alt="Icon" />
-          </div>
-          <div className="top">
-            <h3 className="title">Converge</h3>
-            <div className="liner"></div>
-          </div>
-          <p>Converge is a private messaging app built for fun.</p>
-        </a>
-        <a
           href="https://coll.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
@@ -74,6 +74,21 @@ function Portfolio(props) {
             <div className="liner"></div>
           </div>
           <p>Video call app I built for learning and fun.</p>
+        </a>
+        <a
+          href="https://convrge.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project"
+        >
+          <div className="image">
+            <img src={first} alt="Icon" />
+          </div>
+          <div className="top">
+            <h3 className="title">Converge</h3>
+            <div className="liner"></div>
+          </div>
+          <p>Converge is a private messaging app built for fun.</p>
         </a>
         <a
           href="https://ricapp.netlify.app"
