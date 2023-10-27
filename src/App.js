@@ -12,7 +12,7 @@ function App(props) {
 
     return (
         <Router>
-            <div className="app">
+            <div className="app" style={{ maxWidth: 1600, marginLeft: 'auto', marginRight: 'auto' }}>
                 <TopBar />
                 <Alert
                     status={status}

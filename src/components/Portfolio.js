@@ -1,8 +1,46 @@
 import React from "react";
-import block from "../images/block.e8d18b0.png";
-import screen from "../images/screen.4f85ea4.png";
-import first from "../images/ctr.e069b5d.png";
-import second from "../images/lc.5abc476.png";
+
+const projects = [
+  {
+    name: "Multiplayer Chess",
+    description: "A simple multiplayer chess game.",
+    link: "https://chessrepo.netlify.app",
+    frontendCode: "",
+    backendCode: "https://github.com/judgegodwins/chess-server",
+    stack: ["Go", "React", "Redis", "WebSocket"],
+  },
+  {
+    name: "School Management Dashboard",
+    description: "A school management platform.",
+    link: "https://admin-ges.vercel.app",
+    frontendCode: "",
+    backendCode: "",
+    stack: ["Typescript", "NextJS", "NodeJS", "PostgreSQL"],
+  },
+  {
+    name: "Anonly",
+    description: "Anonly is an anonymous messaging app.",
+    link: "https://anonly.netlify.app",
+    backendCode: "https://github.com/judgegodwins?tab=repositories&q=anonly",
+    stack: ["Typescript", "React", "NodeJS"],
+  },
+  {
+    name: "Coll",
+    description: "A simple video call app I built for learning and fun.",
+    link: "https://coll.netlify.app",
+    frontendCode: "",
+    backendCode: "https://github.com/judgegodwins?tab=repositories&q=coll",
+    stack: ["React", "NodeJS"],
+  },
+  {
+    name: "Musicplayr",
+    description: "A simple music player app built with Javascript",
+    link: "",
+    frontendCode: "",
+    backendCode: "https://github.com/judgegodwins/Musicplayr",
+    stack: ["Javascript"],
+  },
+];
 
 function Portfolio(props) {
   return (
@@ -15,22 +53,73 @@ function Portfolio(props) {
         ></div>
       </div>
       <div className="portfolio-div">
-        <a
-          href="https://anonly.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project"
-        >
-          <div className="image">
-            <img src={first} alt="Icon" />
+        {projects.map((p) => (
+          <div
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="project"
+          >
+            {/* <div className="image">
+          <img src={first} alt="Icon" />
+        </div> */}
+            <div className="top">
+              <div>
+                <h3 className="title">{p.name}</h3>
+                <span className="stack">{p.stack.join(", ")}</span>
+              </div>
+
+              <div
+                className="project-action-cover"
+                style={{ display: "flex", gap: 12, flexWrap: "nowrap" }}
+              >
+                {p.link && (
+                  <small>
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action"
+                    >
+                      <i class="fas fa-eye" style={{ marginRight: 2 }}></i>
+                      <span>Live</span>
+                    </a>
+                  </small>
+                )}
+                {p.backendCode && (
+                  <small>
+                    <a
+                      href={p.backendCode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action"
+                    >
+                      <i
+                        class="fas fa-code-branch"
+                        style={{ marginRight: 2 }}
+                      ></i>
+                      <span>Code</span>
+                    </a>
+                  </small>
+                )}
+              </div>
+              {/* <div className="liner"></div> */}
+            </div>
+            <div
+              style={{
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                backgroundColor: "#3D3D3D",
+                height: 1,
+                width: "100%",
+              }}
+            />
+            <div style={{ width: "100%" }}>
+              <p style={{ textAlign: "left", margin: 0 }}>{p.description}</p>
+            </div>
           </div>
-          <div className="top">
-            <h3 className="title">Anonly</h3>
-            <div className="liner"></div>
-          </div>
-          <p>Anonly is an anonymous messaging app. (Work in progress)</p>
-        </a>
-        <a
+        ))}
+
+        {/* <a
           href="https://chessrepo.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
@@ -166,7 +255,7 @@ function Portfolio(props) {
             records and handle store matters with ease. My Work is featured in
             CustomerPayMe's API
           </p>
-        </a>
+        </a> */}
       </div>
     </div>
   );
