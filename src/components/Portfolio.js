@@ -12,7 +12,7 @@ const projects = [
   {
     name: "School Management Dashboard",
     description: "A school management platform.",
-    link: "https://admin-ges.vercel.app",
+    link: "https://admin-mgt.vercel.app",
     frontendCode: "",
     backendCode: "",
     stack: ["Typescript", "NextJS", "NodeJS", "PostgreSQL"],
