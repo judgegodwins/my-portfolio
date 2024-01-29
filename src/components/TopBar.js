@@ -15,7 +15,7 @@ function TopBar() {
                 <a target="_blank" rel="noopener noreferrer" href="mailto: judgegodwins@gmail.com">
                     <li className="link">CONTACT ME</li>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1_w65zw-qnRA3ZCat1BRNnb-DXVD71CeoxLcFAR70Nz0/edit?usp=sharing">
+                <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/184UxMyjyc6CXTKNcYcqzqbIyKNuF0rlGpkbpACWTatE/edit?usp=sharing">
                     <li className="link">RESUME</li>
                 </a>
             </ul>
