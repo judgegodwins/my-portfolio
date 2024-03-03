@@ -12,6 +12,9 @@ function TopBar() {
                 <Link to="/projects">
                     <li className="link">PROJECTS</li>
                 </Link>
+                <Link to="/articles">
+                    <li className="link">ARTICLES</li>
+                </Link>
                 <a target="_blank" rel="noopener noreferrer" href="mailto: judgegodwins@gmail.com">
                     <li className="link">CONTACT ME</li>
                 </a>

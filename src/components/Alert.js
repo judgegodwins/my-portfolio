@@ -4,7 +4,7 @@ function Alert({ status, name }) {
     const success = status === 'success';
     
     const alertDiv = useRef(null);
-    if(success || status == "failure")
+    if(success || status === "failure")
         setTimeout(() => {
             alertDiv.current.style.display = 'none'
         }, 5000);
@@ -15,7 +15,7 @@ function Alert({ status, name }) {
             className="alert" 
             style={{ 
                 background: '#292929',
-                display: status != 'sending' && status != 'idle'
+                display: status !== 'sending' && status !== 'idle'
                     ? "flex"
                     : "none"
             }}

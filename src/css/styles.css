@@ -509,6 +509,8 @@ button > i {
 
 .portfolio-div .project {
   background: #292929;
+  position: relative;
+  display: block;
 }
 
 /* .portfolio-div .project:nth-child(2) {

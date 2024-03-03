@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import HomeTab from './HomeTab';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
+import Articles from './Articles';
 
 function Container({ location, status, setName, setStatus }) {
     return (
@@ -24,6 +25,7 @@ function Container({ location, status, setName, setStatus }) {
                             }
                         />
                         <Route path="/projects" component={Portfolio} />
+                        <Route path="/articles" component={Articles} />
                     </Switch>
                 </section>
             </CSSTransition>
